@@ -1,2 +1,3 @@
-# hive-ui
-Hive UI
+# Hive UI
+
+Framework agnostic UI library.
