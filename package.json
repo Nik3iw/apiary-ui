@@ -22,21 +22,19 @@
     "url": "https://github.com/Nik3iw/hive-ui/issues"
   },
   "files": [
-    "dist"
+    "lib"
   ],
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "main": "./lib/index.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
-    }
+    ".": "./lib/index.ts",
+    "./hive-ui.css": "./lib/styles/hive-ui.css"
   },
   "scripts": {
     "dev": "vite",
     "type-check": "tsc --project ./tsconfig.build.json --noEmit",
     "build": "npm run type-check && vite build",
     "preview": "vite preview",
+    "colors:generate": "tsx --tsconfig ./tsconfig.app.json ./lib/utils/colors.ts",
     "release": "semantic-release",
     "release:dry": "semantic-release --dry-run"
   },
@@ -45,27 +43,34 @@
     "tailwind-variants": "^3.3.1"
   },
   "devDependencies": {
-    "@nik3iw/eslint-config": "^1.1.0",
+    "@nik3iw/eslint-config": "^1.2.1",
     "@nik3iw/prettier-config": "^1.0.1",
     "@nik3iw/tsconfig": "^1.1.2",
+    "@radix-ui/colors": "^3.0.0",
     "@semantic-release/changelog": "^7.0.0",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^11.0.1",
     "@semantic-release/github": "^12.0.9",
     "@semantic-release/npm": "^13.1.5",
     "@semantic-release/release-notes-generator": "^14.1.1",
-    "@types/node": "^26.1.2",
+    "@types/node": "^26.2.0",
     "@vitejs/plugin-vue": "^6.0.8",
     "conventional-changelog-conventionalcommits": "^10.2.1",
-    "eslint": "^10.8.0",
+    "eslint": "^10.8.1",
+    "jiti": "^2.7.0",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "semantic-release": "^25.0.9",
+    "tsx": "^4.23.11",
     "typescript": "~6.0.3",
     "vite": "^8.2.1",
     "vite-plugin-dts": "^5.0.3",
     "vite-plugin-vue-devtools": "^8.2.1",
     "vue": "^3.5.41",
     "vue-tsc": "^3.3.9"
+  },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true,
+    "esbuild@0.28.1": true
   }
 }
