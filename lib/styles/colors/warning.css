@@ -1,0 +1,73 @@
+:root,
+.light,
+.light-theme {
+  --ui-warning-base: #fefcfb;
+  --ui-warning-bg-subtle: #fff7ed;
+  --ui-warning-bg: #ffefd6;
+  --ui-warning-bg-hover: #ffdfb5;
+  --ui-warning-bg-active: #ffd19a;
+  --ui-warning-line: #ffc182;
+  --ui-warning-border: #f5ae73;
+  --ui-warning-border-hover: #ec9455;
+  --ui-warning-solid: #f76b15;
+  --ui-warning-solid-hover: #ef5f00;
+  --ui-warning-text: #cc4e00;
+  --ui-warning-text-contrast: #582d1d;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --ui-warning-base: color(display-p3 0.995 0.988 0.985);
+      --ui-warning-bg-subtle: color(display-p3 0.994 0.968 0.934);
+      --ui-warning-bg: color(display-p3 0.989 0.938 0.85);
+      --ui-warning-bg-hover: color(display-p3 1 0.874 0.687);
+      --ui-warning-bg-active: color(display-p3 1 0.821 0.583);
+      --ui-warning-line: color(display-p3 0.975 0.767 0.545);
+      --ui-warning-border: color(display-p3 0.919 0.693 0.486);
+      --ui-warning-border-hover: color(display-p3 0.877 0.597 0.379);
+      --ui-warning-solid: color(display-p3 0.9 0.45 0.2);
+      --ui-warning-solid-hover: color(display-p3 0.87 0.409 0.164);
+      --ui-warning-text: color(display-p3 0.76 0.34 0);
+      --ui-warning-text-contrast: color(display-p3 0.323 0.185 0.127);
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --ui-warning-base: #17120e;
+  --ui-warning-bg-subtle: #1e160f;
+  --ui-warning-bg: #331e0b;
+  --ui-warning-bg-hover: #462100;
+  --ui-warning-bg-active: #562800;
+  --ui-warning-line: #66350c;
+  --ui-warning-border: #7e451d;
+  --ui-warning-border-hover: #a35829;
+  --ui-warning-solid: #f76b15;
+  --ui-warning-solid-hover: #ff801f;
+  --ui-warning-text: #ffa057;
+  --ui-warning-text-contrast: #ffe0c2;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --ui-warning-base: color(display-p3 0.088 0.07 0.057);
+      --ui-warning-bg-subtle: color(display-p3 0.113 0.089 0.061);
+      --ui-warning-bg: color(display-p3 0.189 0.12 0.056);
+      --ui-warning-bg-hover: color(display-p3 0.262 0.132 0);
+      --ui-warning-bg-active: color(display-p3 0.315 0.168 0.016);
+      --ui-warning-line: color(display-p3 0.376 0.219 0.088);
+      --ui-warning-border: color(display-p3 0.465 0.283 0.147);
+      --ui-warning-border-hover: color(display-p3 0.601 0.359 0.201);
+      --ui-warning-solid: color(display-p3 0.9 0.45 0.2);
+      --ui-warning-solid-hover: color(display-p3 0.98 0.51 0.23);
+      --ui-warning-text: color(display-p3 1 0.63 0.38);
+      --ui-warning-text-contrast: color(display-p3 0.98 0.883 0.775);
+    }
+  }
+}

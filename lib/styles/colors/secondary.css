@@ -1,0 +1,73 @@
+:root,
+.light,
+.light-theme {
+  --ui-secondary-base: #fffcfd;
+  --ui-secondary-bg-subtle: #fef7f9;
+  --ui-secondary-bg: #ffe9f0;
+  --ui-secondary-bg-hover: #fedce7;
+  --ui-secondary-bg-active: #facedd;
+  --ui-secondary-line: #f3bed1;
+  --ui-secondary-border: #eaacc3;
+  --ui-secondary-border-hover: #e093b2;
+  --ui-secondary-solid: #e93d82;
+  --ui-secondary-solid-hover: #df3478;
+  --ui-secondary-text: #cb1d63;
+  --ui-secondary-text-contrast: #621639;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --ui-secondary-base: color(display-p3 0.998 0.989 0.992);
+      --ui-secondary-bg-subtle: color(display-p3 0.991 0.969 0.976);
+      --ui-secondary-bg: color(display-p3 0.987 0.917 0.941);
+      --ui-secondary-bg-hover: color(display-p3 0.975 0.866 0.904);
+      --ui-secondary-bg-active: color(display-p3 0.953 0.813 0.864);
+      --ui-secondary-line: color(display-p3 0.921 0.755 0.817);
+      --ui-secondary-border: color(display-p3 0.88 0.683 0.761);
+      --ui-secondary-border-hover: color(display-p3 0.834 0.592 0.694);
+      --ui-secondary-solid: color(display-p3 0.843 0.298 0.507);
+      --ui-secondary-solid-hover: color(display-p3 0.807 0.266 0.468);
+      --ui-secondary-text: color(display-p3 0.731 0.195 0.388);
+      --ui-secondary-text-contrast: color(display-p3 0.352 0.111 0.221);
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --ui-secondary-base: #191114;
+  --ui-secondary-bg-subtle: #201318;
+  --ui-secondary-bg: #381525;
+  --ui-secondary-bg-hover: #4d122f;
+  --ui-secondary-bg-active: #5c1839;
+  --ui-secondary-line: #6d2545;
+  --ui-secondary-border: #873356;
+  --ui-secondary-border-hover: #b0436e;
+  --ui-secondary-solid: #e93d82;
+  --ui-secondary-solid-hover: #ee518a;
+  --ui-secondary-text: #ff92ad;
+  --ui-secondary-text-contrast: #fdd3e8;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --ui-secondary-base: color(display-p3 0.093 0.068 0.078);
+      --ui-secondary-bg-subtle: color(display-p3 0.117 0.078 0.095);
+      --ui-secondary-bg: color(display-p3 0.203 0.091 0.143);
+      --ui-secondary-bg-hover: color(display-p3 0.277 0.087 0.182);
+      --ui-secondary-bg-active: color(display-p3 0.332 0.115 0.22);
+      --ui-secondary-line: color(display-p3 0.394 0.162 0.268);
+      --ui-secondary-border: color(display-p3 0.489 0.222 0.336);
+      --ui-secondary-border-hover: color(display-p3 0.638 0.289 0.429);
+      --ui-secondary-solid: color(display-p3 0.843 0.298 0.507);
+      --ui-secondary-solid-hover: color(display-p3 0.864 0.364 0.539);
+      --ui-secondary-text: color(display-p3 1 0.56 0.66);
+      --ui-secondary-text-contrast: color(display-p3 0.966 0.834 0.906);
+    }
+  }
+}
