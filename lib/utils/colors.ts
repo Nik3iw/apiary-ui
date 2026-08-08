@@ -23,6 +23,7 @@ const COLOR_PALETTE = {
   info: "blue",
   warning: "orange",
   error: "red",
+  neutral: "slate",
 } as const;
 
 type COLOR_TOKENS = Record<keyof typeof COLOR_PALETTE, Color>;
