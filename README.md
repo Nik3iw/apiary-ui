@@ -115,3 +115,7 @@ Meets WCAG AAA (~7:1) against steps 1–2. Use for primary/critical text.
 | Solid badge/tag          | bg step 9 + white/contrast text                                                          |
 
 ---
+
+## Acknowledgements
+
+This project uses [Radix Colors](https://www.radix-ui.com/colors) by [WorkOS](https://workos.com) for its color system.
