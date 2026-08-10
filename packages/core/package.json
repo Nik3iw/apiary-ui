@@ -51,6 +51,7 @@
   "devDependencies": {
     "@nik3iw/eslint-config": "catalog:",
     "@nik3iw/tsconfig": "catalog:",
+    "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "catalog:",
     "eslint": "catalog:",
