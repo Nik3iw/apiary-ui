@@ -1,14 +1,16 @@
+import path from "node:path";
 import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueDevTools from "vite-plugin-vue-devtools";
+import vuePlugin from "@vitejs/plugin-vue";
+import VitePluginVueDevTools from "vite-plugin-vue-devtools";
 import dts from "vite-plugin-dts";
-import { resolve } from "node:path";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
-    vueDevTools(),
+    tailwindcss(),
+    vuePlugin(),
+    VitePluginVueDevTools(),
     dts({
       bundleTypes: true,
       insertTypesEntry: true,
@@ -22,7 +24,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       // name: "hive-ui",
-      entry: resolve(__dirname, "lib/index.ts"),
+      entry: path.resolve(import.meta.dirname, "lib/index.ts"),
       formats: ["es"],
       fileName: "index",
       // fileName: (format) => `index.${format}.js`,
