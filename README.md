@@ -1,4 +1,4 @@
-# Hive UI
+# Apiary UI
 
 Framework agnostic UI library.
 
