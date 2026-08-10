@@ -3,17 +3,17 @@
 .light-theme {
   /* Primary Color */
   --ui-primary: #4f39f6; /* Indigo-600, Radix 9 */
-  --ui-primary-50: #f3f2ff; /* Radix 2 */
-  --ui-primary-100: #e4e3fe; /* Radix 3 */
-  --ui-primary-200: #cccafd; /* Radix 4 */
-  --ui-primary-300: #b2aefc; /* Radix 5 */
-  --ui-primary-400: #9b95fb; /* Radix 6 */
-  --ui-primary-500: #8178fa; /* Radix 7 */
-  --ui-primary-600: #6a5cf8; /* Radix 8 */
-  --ui-primary-700: #4f39f6; /* Radix 9 */
-  --ui-primary-800: #3011c6; /* Radix 10 */
-  --ui-primary-900: #180674; /* Radix 11 */
-  --ui-primary-950: #0e0353; /* Radix 12 */
+  --ui-primary-50: #f3f2ff; /*  Radix 2:  Background Subtle */
+  --ui-primary-100: #e4e3fe; /* Radix 3:  Background */
+  --ui-primary-200: #cccafd; /* Radix 4:  Background Hover */
+  --ui-primary-300: #b2aefc; /* Radix 5:  Background Active/Selected */
+  --ui-primary-400: #9b95fb; /* Radix 6:  Border Subtle, Divider (Non-Interactive Elements) */
+  --ui-primary-500: #8178fa; /* Radix 7:  Border (Interactive Elements), Focus Ring */
+  --ui-primary-600: #6a5cf8; /* Radix 8:  Border Hover, Focus Ring */
+  --ui-primary-700: #4f39f6; /* Radix 9:  Solid Backgrounds */
+  --ui-primary-800: #3011c6; /* Radix 10: Solid Backgrounds Hover */
+  --ui-primary-900: #180674; /* Radix 11: Text Subtle (Low Contrast: AA) */
+  --ui-primary-950: #0e0353; /* Radix 12: Text (High Contrast: AAA) */
 
   /* Secondary Color */
   --ui-secondary: #009689; /* Teal-600, Radix 9 */
