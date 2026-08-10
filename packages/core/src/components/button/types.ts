@@ -1,9 +1,9 @@
-import type { ThemeMainColor, ThemeMainSize, ThemeMainVariant } from "../../types";
+import type { CoreThemeColor, CoreThemeSize, CoreThemeVariant } from "@/types";
 
 export interface ButtonProps {
-  color?: ThemeMainColor;
-  variant?: ThemeMainVariant;
-  size?: ThemeMainSize;
+  color?: CoreThemeColor;
+  variant?: CoreThemeVariant;
+  size?: CoreThemeSize;
   icon?: unknown;
   isLoading?: boolean;
 }

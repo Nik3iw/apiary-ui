@@ -1,4 +1,4 @@
 {
   "extends": "@nik3iw/tsconfig/tsconfig.node.json",
-  "include": ["tsdown.config.ts", "eslint.config.ts"]
+  "include": ["tsdown.config.ts"]
 }

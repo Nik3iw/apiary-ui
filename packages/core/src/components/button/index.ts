@@ -1,2 +1,2 @@
-export * from "./types";
-export * from "./variants";
+export * from "@/components/button/types";
+export * from "@/components/button/variants";

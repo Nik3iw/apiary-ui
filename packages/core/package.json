@@ -23,15 +23,25 @@
     "url": "https://github.com/Nik3iw/apiary-ui/issues"
   },
   "files": [
-    "lib"
+    "dist"
   ],
-  "main": "./lib/index.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "exports": {
-    ".": "./lib/index.ts",
-    "./hive-ui.css": "./lib/styles/hive-ui.css"
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts",
+      "style": "./dist/apiary-ui.css"
+    }
   },
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
-    "build": "tsx",
+    "build:components": "tsdown",
+    "build:styles": "tailwindcss -i ./src/styles/apiary-ui.css -o ./dist/apiary-ui.css --minify",
+    "build": "pnpm run build:components && pnpm run build:styles",
     "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
     "type-check": "tsc --noEmit"
   },
@@ -46,6 +56,7 @@
     "eslint": "catalog:",
     "jiti": "^2.7.0",
     "tailwindcss": "^4.3.3",
+    "tsdown": "^0.22.14",
     "tsx": "^4.23.11",
     "typescript": "catalog:"
   }
