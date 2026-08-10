@@ -39,3 +39,15 @@ coverage
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Turbo
+.turbo
+out/
+
+# Astro generated types
+.astro/
