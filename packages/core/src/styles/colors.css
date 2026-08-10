@@ -1,0 +1,311 @@
+:root,
+.light,
+.light-theme {
+  /* Primary Color */
+  --ui-primary: #4f39f6; /* Indigo-600, Radix 9 */
+  --ui-primary-50: #f3f2ff; /*  Radix 2:  Background Subtle */
+  --ui-primary-100: #e4e3fe; /* Radix 3:  Background */
+  --ui-primary-200: #cccafd; /* Radix 4:  Background Hover */
+  --ui-primary-300: #b2aefc; /* Radix 5:  Background Active/Selected */
+  --ui-primary-400: #9b95fb; /* Radix 6:  Border Subtle, Divider (Non-Interactive Elements) */
+  --ui-primary-500: #8178fa; /* Radix 7:  Border (Interactive Elements), Focus Ring */
+  --ui-primary-600: #6a5cf8; /* Radix 8:  Border Hover, Focus Ring */
+  --ui-primary-700: #4f39f6; /* Radix 9:  Solid Backgrounds */
+  --ui-primary-800: #3011c6; /* Radix 10: Solid Backgrounds Hover */
+  --ui-primary-900: #180674; /* Radix 11: Text Subtle (Low Contrast: AA) */
+  --ui-primary-950: #0e0353; /* Radix 12: Text (High Contrast: AAA) */
+
+  /* Secondary Color */
+  --ui-secondary: #009689; /* Teal-600, Radix 9 */
+  --ui-secondary-50: #d5fff8;
+  --ui-secondary-100: #9ffff1;
+  --ui-secondary-200: #00f4df;
+  --ui-secondary-300: #00e1ce;
+  --ui-secondary-400: #00cfbd;
+  --ui-secondary-500: #00baaa;
+  --ui-secondary-600: #00a89a;
+  --ui-secondary-700: #009689;
+  --ui-secondary-800: #006259;
+  --ui-secondary-900: #003530;
+  --ui-secondary-950: #001e1a;
+
+  /* Neutral Color */
+  --ui-neutral: #45556c; /* Slate-600, Radix 9 */
+  --ui-neutral-50: #eef1f6;
+  --ui-neutral-100: #e0e6ef;
+  --ui-neutral-200: #c1cde0;
+  --ui-neutral-300: #9eb2d0;
+  --ui-neutral-400: #7f9ac1;
+  --ui-neutral-500: #6b83a4;
+  --ui-neutral-600: #586c88;
+  --ui-neutral-700: #45556c;
+  --ui-neutral-800: #2e3a4b;
+  --ui-neutral-900: #19202b;
+  --ui-neutral-950: #0e141b;
+
+  /* Success Color */
+  --ui-success: #009966; /* Emerald-600, Radix 9 */
+  --ui-success-50: #daffeb;
+  --ui-success-100: #aeffd5;
+  --ui-success-200: #00f8a8;
+  --ui-success-300: #00e59b;
+  --ui-success-400: #00d28e;
+  --ui-success-500: #00bd7f;
+  --ui-success-600: #00ab73;
+  --ui-success-700: #009966;
+  --ui-success-800: #006441;
+  --ui-success-900: #003621;
+  --ui-success-950: #001f11;
+
+  /* Info Color */
+  --ui-info: #155dfc; /* Blue-600, Radix 9 */
+  --ui-info-50: #f1f3ff;
+  --ui-info-100: #e4e7ff;
+  --ui-info-200: #c8cffe;
+  --ui-info-300: #b0bafe;
+  --ui-info-400: #93a3fe;
+  --ui-info-500: #738bfd;
+  --ui-info-600: #4f73fd;
+  --ui-info-700: #155dfc;
+  --ui-info-800: #063cac;
+  --ui-info-900: #021f63;
+  --ui-info-950: #011344;
+
+  /* Warning Color */
+  --ui-warning: #bb4d00; /* Amber-700, Radix 9 */
+  --ui-warning-50: #fff0ee;
+  --ui-warning-100: #ffe2dc;
+  --ui-warning-200: #ffc8bc;
+  --ui-warning-300: #ffa992;
+  --ui-warning-400: #ff8b65;
+  --ui-warning-500: #fa6900;
+  --ui-warning-600: #d85a00;
+  --ui-warning-700: #bb4d00;
+  --ui-warning-800: #7e3100;
+  --ui-warning-900: #491900;
+  --ui-warning-950: #2e0d00;
+
+  /* Error Color */
+  --ui-error: #e7000b; /* Red-600, Radix 9 */
+  --ui-error-50: #fff0f0;
+  --ui-error-100: #ffe5e5;
+  --ui-error-200: #ffc7c7;
+  --ui-error-300: #ffabab;
+  --ui-error-400: #ff8889;
+  --ui-error-500: #ff6567;
+  --ui-error-600: #ff3336;
+  --ui-error-700: #e7000b;
+  --ui-error-800: #9c0005;
+  --ui-error-900: #580001;
+  --ui-error-950: #390001;
+}
+
+.dark,
+.dark-theme {
+  /* Primary Color */
+  --ui-primary: #7c86ff; /* Indigo-400, Radix 9 */
+  --ui-primary-50: #00063a;
+  --ui-primary-100: #000e57;
+  --ui-primary-200: #001a81;
+  --ui-primary-300: #0028b3;
+  --ui-primary-400: #0036e8;
+  --ui-primary-500: #304dff;
+  --ui-primary-600: #5c6cff;
+  --ui-primary-700: #7c86ff;
+  --ui-primary-800: #aab0ff;
+  --ui-primary-900: #d5d7ff;
+  --ui-primary-950: #e8e9ff;
+
+  /* Secondary Color */
+  --ui-secondary: #00bba7; /* Teal-500, Radix 9 */
+  --ui-secondary-50: #001411;
+  --ui-secondary-100: #00201c;
+  --ui-secondary-200: #003731;
+  --ui-secondary-300: #004e45;
+  --ui-secondary-400: #00685c;
+  --ui-secondary-500: #008375;
+  --ui-secondary-600: #00a08e;
+  --ui-secondary-700: #00bba7;
+  --ui-secondary-800: #00dcc4;
+  --ui-secondary-900: #00fbe0;
+  --ui-secondary-950: #b4fff1;
+
+  /* Neutral Color */
+  --ui-neutral: #90a1b9; /* Slate-400, Radix 9 */
+  --ui-neutral-50: #0e1115;
+  --ui-neutral-100: #161a1f;
+  --ui-neutral-200: #292f37;
+  --ui-neutral-300: #3b434e;
+  --ui-neutral-400: #505a69;
+  --ui-neutral-500: #647182;
+  --ui-neutral-600: #78879d;
+  --ui-neutral-700: #90a1b9;
+  --ui-neutral-800: #b4bfcf;
+  --ui-neutral-900: #dbe0e8;
+  --ui-neutral-950: #ebeef2;
+
+  /* Success Color */
+  --ui-success: #00bc7d; /* Emerald-500, Radix 9 */
+  --ui-success-50: #00150a;
+  --ui-success-100: #002112;
+  --ui-success-200: #003621;
+  --ui-success-300: #004f32;
+  --ui-success-400: #006a44;
+  --ui-success-500: #008356;
+  --ui-success-600: #009f69;
+  --ui-success-700: #00bc7d;
+  --ui-success-800: #00dc93;
+  --ui-success-900: #00ffab;
+  --ui-success-950: #beffdc;
+
+  /* Info Color */
+  --ui-info: #2b7fff; /* Blue-500, Radix 9 */
+  --ui-info-50: #000d28;
+  --ui-info-100: #00163a;
+  --ui-info-200: #002659;
+  --ui-info-300: #00377a;
+  --ui-info-400: #004699;
+  --ui-info-500: #0058bd;
+  --ui-info-600: #006be2;
+  --ui-info-700: #2b7fff;
+  --ui-info-800: #89a9ff;
+  --ui-info-900: #c7d3ff;
+  --ui-info-950: #e1e7ff;
+
+  /* Warning Color */
+  --ui-warning: #fe9a00; /* Amber-500, Radix 9 */
+  --ui-warning-50: #1d0d00;
+  --ui-warning-100: #2c1600;
+  --ui-warning-200: #4c2b00;
+  --ui-warning-300: #6c3e00;
+  --ui-warning-400: #8d5300;
+  --ui-warning-500: #b36b00;
+  --ui-warning-600: #d78200;
+  --ui-warning-700: #fe9a00;
+  --ui-warning-800: #ffbe91;
+  --ui-warning-900: #ffdfcd;
+  --ui-warning-950: #ffede4;
+
+  /* Error Color */
+  --ui-error: #fb2c36; /* Red-500, Radix 9 */
+  --ui-error-50: #270101;
+  --ui-error-100: #380103;
+  --ui-error-200: #570307;
+  --ui-error-300: #73060c;
+  --ui-error-400: #950a13;
+  --ui-error-500: #b80f1b;
+  --ui-error-600: #dd1522;
+  --ui-error-700: #fb2c36;
+  --ui-error-800: #fc8a8c;
+  --ui-error-900: #fdc7c8;
+  --ui-error-950: #fee2e2;
+}
+
+/* Completely disable TailwindCSS Built-In Colors */
+@theme {
+  --color-*: initial;
+}
+
+@theme inline {
+  /* Primary Color */
+  --color-primary: var(--ui-primary);
+  --color-primary-50: var(--ui-primary-50);
+  --color-primary-100: var(--ui-primary-100);
+  --color-primary-200: var(--ui-primary-200);
+  --color-primary-300: var(--ui-primary-300);
+  --color-primary-400: var(--ui-primary-400);
+  --color-primary-500: var(--ui-primary-500);
+  --color-primary-600: var(--ui-primary-600);
+  --color-primary-700: var(--ui-primary-700);
+  --color-primary-800: var(--ui-primary-800);
+  --color-primary-900: var(--ui-primary-900);
+  --color-primary-950: var(--ui-primary-950);
+
+  /* Secondary Color */
+  --color-secondary: var(--ui-secondary);
+  --color-secondary-50: var(--ui-secondary-50);
+  --color-secondary-100: var(--ui-secondary-100);
+  --color-secondary-200: var(--ui-secondary-200);
+  --color-secondary-300: var(--ui-secondary-300);
+  --color-secondary-400: var(--ui-secondary-400);
+  --color-secondary-500: var(--ui-secondary-500);
+  --color-secondary-600: var(--ui-secondary-600);
+  --color-secondary-700: var(--ui-secondary-700);
+  --color-secondary-800: var(--ui-secondary-800);
+  --color-secondary-900: var(--ui-secondary-900);
+  --color-secondary-950: var(--ui-secondary-950);
+
+  /* Neutral Color */
+  --color-neutral: var(--ui-neutral);
+  --color-neutral-50: var(--ui-neutral-50);
+  --color-neutral-100: var(--ui-neutral-100);
+  --color-neutral-200: var(--ui-neutral-200);
+  --color-neutral-300: var(--ui-neutral-300);
+  --color-neutral-400: var(--ui-neutral-400);
+  --color-neutral-500: var(--ui-neutral-500);
+  --color-neutral-600: var(--ui-neutral-600);
+  --color-neutral-700: var(--ui-neutral-700);
+  --color-neutral-800: var(--ui-neutral-800);
+  --color-neutral-900: var(--ui-neutral-900);
+  --color-neutral-950: var(--ui-neutral-950);
+
+  /* Success Color */
+  --color-success: var(--ui-success);
+  --color-success-50: var(--ui-success-50);
+  --color-success-100: var(--ui-success-100);
+  --color-success-200: var(--ui-success-200);
+  --color-success-300: var(--ui-success-300);
+  --color-success-400: var(--ui-success-400);
+  --color-success-500: var(--ui-success-500);
+  --color-success-600: var(--ui-success-600);
+  --color-success-700: var(--ui-success-700);
+  --color-success-800: var(--ui-success-800);
+  --color-success-900: var(--ui-success-900);
+  --color-success-950: var(--ui-success-950);
+
+  /* Info Color */
+  --color-info: var(--ui-info);
+  --color-info-50: var(--ui-info-50);
+  --color-info-100: var(--ui-info-100);
+  --color-info-200: var(--ui-info-200);
+  --color-info-300: var(--ui-info-300);
+  --color-info-400: var(--ui-info-400);
+  --color-info-500: var(--ui-info-500);
+  --color-info-600: var(--ui-info-600);
+  --color-info-700: var(--ui-info-700);
+  --color-info-800: var(--ui-info-800);
+  --color-info-900: var(--ui-info-900);
+  --color-info-950: var(--ui-info-950);
+
+  /* Warning Color */
+  --color-warning: var(--ui-warning);
+  --color-warning-50: var(--ui-warning-50);
+  --color-warning-100: var(--ui-warning-100);
+  --color-warning-200: var(--ui-warning-200);
+  --color-warning-300: var(--ui-warning-300);
+  --color-warning-400: var(--ui-warning-400);
+  --color-warning-500: var(--ui-warning-500);
+  --color-warning-600: var(--ui-warning-600);
+  --color-warning-700: var(--ui-warning-700);
+  --color-warning-800: var(--ui-warning-800);
+  --color-warning-900: var(--ui-warning-900);
+  --color-warning-950: var(--ui-warning-950);
+
+  /* Error Color */
+  --color-error: var(--ui-error);
+  --color-error-50: var(--ui-error-50);
+  --color-error-100: var(--ui-error-100);
+  --color-error-200: var(--ui-error-200);
+  --color-error-300: var(--ui-error-300);
+  --color-error-400: var(--ui-error-400);
+  --color-error-500: var(--ui-error-500);
+  --color-error-600: var(--ui-error-600);
+  --color-error-700: var(--ui-error-700);
+  --color-error-800: var(--ui-error-800);
+  --color-error-900: var(--ui-error-900);
+  --color-error-950: var(--ui-error-950);
+
+  /* Common Colors */
+  --color-black: #000;
+  --color-white: #fff;
+}
