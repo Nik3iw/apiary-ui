@@ -1,0 +1,12 @@
+{
+  "extends": "@nik3iw/tsconfig/tsconfig.browser.json",
+  "compilerOptions": {
+    /* Modules */
+    "paths": { "@/*": ["./src/*"] },
+
+    /* Emit */
+    "outDir": "./dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
