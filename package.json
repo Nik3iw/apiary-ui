@@ -1,0 +1,33 @@
+{
+  "name": "hive-ui",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "author": "Nik3iw",
+  "description": "Hive UI Monorepo",
+  "homepage": "https://github.com/Nik3iw/hive-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nik3iw/hive-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nik3iw/hive-ui/issues"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "type-check": "turbo run type-check"
+  },
+  "devDependencies": {
+    "@nik3iw/prettier-config": "^1.0.1",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "turbo": "^2.10.8",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@11.21.0"
+}

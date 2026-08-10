@@ -1,0 +1,17 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+allowBuilds:
+  esbuild: true
+
+catalogs:
+  default:
+    "@nik3iw/eslint-config": "^1.2.1"
+    "@nik3iw/tsconfig": "^1.1.2"
+    "@types/node": "^26.2.0"
+    "eslint": "^10.8.1"
+    "typescript": "~6.0.3"
+
+minimumReleaseAgeExclude:
+  - "@nik3iw/*"
