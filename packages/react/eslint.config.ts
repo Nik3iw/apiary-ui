@@ -9,12 +9,5 @@ export default createConfig({
     unicorn: true,
     importX: true,
   },
-  extends: [
-    globalIgnores(["dist"]),
-
-    {
-      files: ["**/*.{ts,tsx}"],
-      extends: [reactHooks.configs.flat.recommended, reactRefresh.configs.vite],
-    },
-  ],
+  extends: [globalIgnores(["dist"]), reactHooks.configs.flat.recommended, reactRefresh.configs.vite],
 });
