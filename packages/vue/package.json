@@ -38,7 +38,9 @@
     "vue": "^3.5.0"
   },
   "devDependencies": {
+    "@ark-ui/vue": "^5.38.1",
     "@eslint/js": "^10.0.1",
+    "@lucide/vue": "^1.31.0",
     "@nik3iw/eslint-config": "catalog:",
     "@nik3iw/tsconfig": "catalog:",
     "@tailwindcss/vite": "^4.3.3",
@@ -52,10 +54,12 @@
     "eslint-plugin-vue": "^10.10.0",
     "globals": "^17.9.0",
     "jiti": "^2.7.0",
+    "reka-ui": "^2.10.3",
     "tailwindcss": "^4.3.3",
     "typescript": "catalog:",
     "typescript-eslint": "^8.66.0",
     "vite": "^8.2.1",
+    "vite-plugin-dts": "^5.0.3",
     "vite-plugin-vue-devtools": "^8.2.1",
     "vue": "^3.5.41",
     "vue-eslint-parser": "^10.4.1",

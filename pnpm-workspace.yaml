@@ -6,6 +6,7 @@ allowBuilds:
   "@parcel/watcher": true # @tailwindcss/cli
   esbuild: true
   unrs-resolver: true
+  vue-demi: true
 
 catalogs:
   default:
