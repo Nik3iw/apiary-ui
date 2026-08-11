@@ -19,9 +19,9 @@ export const buttonVariants = tv({
       error: "focus-visible:border-error-900 focus-visible:ring-error-500",
     },
     size: {
-      small: "h-8 gap-1 px-3 has-data-[icon=leading]:ps-2 has-data-[icon=trailing]:pe-2",
-      medium: "h-9 gap-1.5 px-3 has-data-[icon=leading]:ps-2.5 has-data-[icon=trailing]:pe-2.5",
-      large: "h-10 gap-1.5 px-4 has-data-[icon=leading]:ps-3 has-data-[icon=trailing]:pe-3",
+      small: "h-8 gap-1 px-3",
+      medium: "h-9 gap-1.5 px-4",
+      large: "h-10 gap-1.5 px-5",
     },
   },
   compoundVariants: [
