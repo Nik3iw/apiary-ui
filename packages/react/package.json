@@ -1,34 +1,71 @@
 {
-  "name": "vite-react",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@apiary-ui/react",
+  "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "author": "Nik3iw",
+  "description": "React + Tailwind Component Library",
+  "keywords": [
+    "React",
+    "UI",
+    "Component"
+  ],
+  "homepage": "https://github.com/Nik3iw/apiary-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nik3iw/apiary-ui.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/Nik3iw/apiary-ui/issues"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
+    "type-check": "tsc --build"
+  },
+  "peerDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "dependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "@apiary-ui/core": "workspace:*"
   },
   "devDependencies": {
+    "@ark-ui/react": "^5.38.1",
     "@babel/core": "^7.29.7",
+    "@base-ui/react": "^1.7.0",
     "@eslint/js": "^10.0.1",
+    "@nik3iw/eslint-config": "catalog:",
+    "@nik3iw/tsconfig": "catalog:",
     "@rolldown/plugin-babel": "^0.2.3",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^24.13.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.4",
+    "@types/node": "catalog:",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
     "babel-plugin-react-compiler": "^1.0.0",
-    "eslint": "^10.8.0",
+    "eslint": "catalog:",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
-    "globals": "^17.7.0",
-    "typescript": "~6.0.2",
-    "typescript-eslint": "^8.65.0",
-    "vite": "^8.2.0"
+    "globals": "^17.9.0",
+    "jiti": "^2.7.0",
+    "lucide-react": "^1.31.0",
+    "radix-ui": "^1.6.7",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwind-variants": "^3.3.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.66.0",
+    "vite": "^8.2.1",
+    "vite-plugin-dts": "^5.0.3"
   }
 }
