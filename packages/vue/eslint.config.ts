@@ -71,6 +71,16 @@ export default defineConfigWithVueTs(
       // This is a ES2023+ rule
       "unicorn/no-array-sort": ["off"],
       "unicorn/name-replacements": ["off"],
+
+      // Vue
+      "vue/multi-word-component-names": ["off"],
+    },
+  },
+
+  {
+    files: ["**/*.vue"],
+    rules: {
+      "unicorn/consistent-boolean-name": ["off"],
     },
   },
 
