@@ -1,7 +1,28 @@
 {
-  "name": "astro-ts",
+  "name": "@apiary-ui/astro",
+  "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
-  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "author": "Nik3iw",
+  "description": "Astro + Tailwind Component Library",
+  "keywords": [
+    "Astro",
+    "UI",
+    "Component"
+  ],
+  "homepage": "https://github.com/Nik3iw/apiary-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nik3iw/apiary-ui.git",
+    "directory": "packages/astro"
+  },
+  "bugs": {
+    "url": "https://github.com/Nik3iw/apiary-ui/issues"
+  },
   "engines": {
     "node": ">=22.12.0"
   },
@@ -9,9 +30,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
+    "type-check": "astro check"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "astro": "^7.2.0"
+  },
+  "devDependencies": {
     "astro": "^7.2.0"
   }
 }

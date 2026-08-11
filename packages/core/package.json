@@ -58,7 +58,7 @@
     "jiti": "^2.7.0",
     "tailwindcss": "^4.3.3",
     "tsdown": "^0.22.14",
-    "tsx": "^4.23.11",
+    "tsx": "^4.23.12",
     "typescript": "catalog:"
   }
 }
