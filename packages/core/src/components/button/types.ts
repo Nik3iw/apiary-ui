@@ -4,6 +4,7 @@ export interface ButtonProps {
   color?: CoreThemeColor;
   variant?: CoreThemeVariant;
   size?: CoreThemeSize;
-  icon?: unknown;
+  leadingIcon?: unknown;
+  trailingIcon?: unknown;
   isLoading?: boolean;
 }
