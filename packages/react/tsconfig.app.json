@@ -1,11 +1,6 @@
 {
   "extends": "@nik3iw/tsconfig/tsconfig.react.json",
   "compilerOptions": {
-    /* Modules */
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
   },
   "include": ["src", "dev"],

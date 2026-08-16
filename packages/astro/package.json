@@ -54,6 +54,11 @@
     "tailwind-variants": ">=3.3.0",
     "tailwindcss": ">=4.3.0"
   },
+  "peerDependenciesMeta": {
+    "@apiary-ui/core": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@apiary-ui/core": "workspace:^"
   },

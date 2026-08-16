@@ -32,7 +32,8 @@
   "exports": {
     ".": {
       "import": "./src/index.ts",
-      "types": "./src/index.ts"
+      "types": "./src/index.ts",
+      "style": "./src/styles/apiary-ui-react.css"
     }
   },
   "scripts": {
@@ -44,10 +45,17 @@
   },
   "peerDependencies": {
     "@apiary-ui/core": "^0.1.0",
+    "@base-ui/react": "^1.7.0",
+    "lucide-react": "^1.31.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwind-variants": ">=3.3.0",
     "tailwindcss": ">=4.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@apiary-ui/core": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@apiary-ui/core": "workspace:^"
@@ -57,7 +65,6 @@
     "@babel/core": "^7.29.7",
     "@base-ui/react": "^1.7.0",
     "@eslint-react/eslint-plugin": "^5.18.6",
-    "@eslint/js": "^10.0.1",
     "@nik3iw/eslint-config": "catalog:",
     "@nik3iw/tsconfig": "catalog:",
     "@rolldown/plugin-babel": "^0.2.3",
@@ -71,7 +78,6 @@
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.4",
-    "globals": "^17.11.0",
     "jiti": "^2.7.0",
     "lucide-react": "^1.31.0",
     "radix-ui": "^1.6.7",
@@ -81,7 +87,6 @@
     "tailwind-variants": "^3.3.1",
     "tailwindcss": "^4.3.3",
     "typescript": "catalog:",
-    "typescript-eslint": "^8.67.0",
     "vite": "^8.2.1",
     "vite-plugin-dts": "^5.0.3"
   }

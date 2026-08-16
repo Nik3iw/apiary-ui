@@ -1,17 +1,16 @@
-import { fileURLToPath, URL } from "node:url";
 import path from "node:path";
 
 import { defineConfig } from "vite";
-import react, { reactCompilerPreset } from "@vitejs/plugin-react";
-import babel from "@rolldown/plugin-babel";
+import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
+import babelPlugin from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
 import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] }),
+    viteReact(),
+    babelPlugin({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
     dts({
       bundleTypes: true,
@@ -20,11 +19,6 @@ export default defineConfig({
       include: ["src"],
     }),
   ],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
   build: {
     copyPublicDir: false,
     emptyOutDir: true,
