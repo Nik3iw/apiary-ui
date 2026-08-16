@@ -26,19 +26,33 @@
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
   },
+  "files": [
+    "src"
+  ],
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "dev:build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
     "type-check": "vue-tsc --build"
   },
   "peerDependencies": {
-    "tailwindcss": "^4.3.0",
-    "vue": "^3.5.0"
+    "@apiary-ui/core": "^0.1.0",
+    "tailwind-variants": ">=3.3.0",
+    "tailwindcss": ">=4.3.0",
+    "vue": ">=3.5.0"
   },
   "dependencies": {
-    "@apiary-ui/core": "workspace:*"
+    "@apiary-ui/core": "workspace:^"
   },
   "devDependencies": {
     "@ark-ui/vue": "^5.38.1",

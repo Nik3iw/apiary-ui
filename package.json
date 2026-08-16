@@ -16,12 +16,17 @@
   },
   "scripts": {
     "dev": "turbo run dev",
+    "build:core": "turbo run build --filter=@apiary-ui/core",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "format": "prettier --write .",
-    "type-check": "turbo run type-check"
+    "type-check": "turbo run type-check",
+    "changeset": "changeset",
+    "release:version": "changeset version",
+    "release:publish": "changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.0",
     "@nik3iw/prettier-config": "^1.0.1",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",

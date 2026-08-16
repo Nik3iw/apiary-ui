@@ -46,7 +46,8 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "tailwind-variants": ">=3.0.0"
+    "tailwind-variants": ">=3.3.0",
+    "tailwindcss": ">=4.3.0"
   },
   "devDependencies": {
     "@nik3iw/eslint-config": "catalog:",
@@ -58,6 +59,7 @@
     "jiti": "^2.7.0",
     "lightningcss": "^1.33.0",
     "lightningcss-cli": "^1.33.0",
+    "tailwind-variants": "^3.3.1",
     "tailwindcss": "^4.3.3",
     "tsdown": "^0.22.14",
     "tsx": "^4.23.12",
