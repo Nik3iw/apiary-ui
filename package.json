@@ -22,8 +22,8 @@
     "format": "prettier --write .",
     "type-check": "turbo run type-check",
     "changeset": "changeset",
-    "release:version": "changeset version",
-    "release:publish": "changeset publish"
+    "changeset:version": "changeset version",
+    "changeset:release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.0",

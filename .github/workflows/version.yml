@@ -1,0 +1,52 @@
+name: Version Packages
+
+# 1. This workflow is triggered manually
+on:
+  workflow_dispatch:
+
+# recommended: reset permissions and explicitly specify for each job
+permissions: {}
+
+# recommended: avoid concurrent runs for the same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  version:
+    name: Version Packages
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # To push new version tag and commit changes
+      issues: write # To comment on issues and PRs
+      pull-requests: write # To comment on issues and PRs
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          # This is required to push changes back to the repo
+          persist-credentials: false
+          # important for semantic-release to analyze commits
+          fetch-depth: 0
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: "pnpm"
+          # This line configures npm to use OIDC for auth
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Commit Version Bumps
+        uses: changesets/action@v2
+        with:
+          version-script: pnpm changeset:version
+          github-token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
