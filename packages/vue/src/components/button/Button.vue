@@ -6,6 +6,7 @@ import { buttonVariants } from "@apiary-ui/core";
 import { cn } from "tailwind-variants";
 import type { ButtonHTMLAttributes, Component } from "vue";
 import { computed } from "vue";
+import { Spinner } from "@/components/spinner";
 
 // defineOptions({ inheritAttrs: false })
 
@@ -45,8 +46,31 @@ const { forwardRef } = useForwardExpose();
     :aria-busy="props.isLoading"
     :class="cn(buttonVariants({ variant: props.variant, color: props.color, size: props.size }), props.class)"
   >
-    <component :is="props.leadingIcon" data-icon="leading" />
-    <slot />
-    <component :is="props.trailingIcon" data-icon="trailing" />
+    <Spinner
+      v-if="props.isLoading"
+      aria-hidden="true"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+    />
+
+    <!-- Leading Icon -->
+    <component
+      :is="props.leadingIcon"
+      v-if="props.leadingIcon !== undefined"
+      data-icon="leading"
+      :class="{ invisible: props.isLoading }"
+    />
+
+    <!-- Slot Content -->
+    <span v-if="$slots['default']" :class="{ invisible: props.isLoading }">
+      <slot />
+    </span>
+
+    <!-- Trailing Icon -->
+    <component
+      :is="props.trailingIcon"
+      v-if="props.trailingIcon !== undefined"
+      data-icon="trailing"
+      :class="{ invisible: props.isLoading }"
+    />
   </Primitive>
 </template>
