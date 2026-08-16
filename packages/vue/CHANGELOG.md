@@ -1,5 +1,11 @@
 # @apiary-ui/vue
 
+## 0.1.2
+
+### Patch Changes
+
+- [`648ac9b`](https://github.com/Nik3iw/apiary-ui/commit/648ac9bb530222ac23b849f80aabb7c3730bb0bd) Thanks [@Nik3iw](https://github.com/Nik3iw)! - Remove path alias
+
 ## 0.1.1
 
 ### Patch Changes
