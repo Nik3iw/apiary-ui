@@ -1,0 +1,87 @@
+---
+import { MoonStar, Sun } from "@lucide/astro";
+---
+
+<button
+  class="group cursor-pointer text-slate-600 transition-colors duration-300 hover:text-indigo-600"
+  data-theme="light"
+  data-dark-light-toggle
+>
+  <span class="group-data-[theme=dark]:hidden">
+    <MoonStar />
+  </span>
+
+  <span class="hidden text-yellow-500 group-data-[theme=dark]:block">
+    <Sun />
+  </span>
+</button>
+
+<script>
+  const htmlTag = document.querySelector("html");
+  const toggles = document.querySelectorAll("[data-dark-light-toggle]");
+
+  function initLocalStorage() {
+    localStorage.setItem("theme", "system");
+  }
+
+  function changeTheme(mode: "light" | "dark") {
+    if (mode === "light") {
+      htmlTag?.classList.remove("dark");
+      toggles.forEach((toggle) => {
+        toggle.setAttribute("data-theme", "light");
+      });
+    } else {
+      htmlTag?.classList.add("dark");
+      toggles.forEach((toggle) => {
+        toggle.setAttribute("data-theme", "dark");
+      });
+    }
+  }
+
+  // Set theme mode based on prefers-color-scheme or localStorage
+  // TODO: Calls twice, Move it to somewhere else
+  (() => {
+    const localTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (localTheme === null) {
+      initLocalStorage();
+    }
+
+    if ((localTheme === "system" && prefersDark) || localTheme === "dark") {
+      changeTheme("dark");
+    }
+  })();
+
+  // Set theme mode when prefers-color-scheme changed
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+    const localTheme = localStorage.getItem("theme");
+
+    if (localTheme === null) {
+      initLocalStorage();
+    }
+
+    if (localTheme !== "system") {
+      return;
+    }
+
+    changeTheme(event.matches ? "dark" : "light");
+  });
+
+  // Manually change theme mode
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const localTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      // Change to light mode
+      if ((localTheme === "system" && prefersDark) || localTheme === "dark") {
+        changeTheme("light");
+        localStorage.setItem("theme", "light");
+      } else {
+        changeTheme("dark");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  });
+</script>
