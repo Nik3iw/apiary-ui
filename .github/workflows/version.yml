@@ -49,4 +49,5 @@ jobs:
         uses: changesets/action@v2
         with:
           version-script: pnpm changeset:version
-          github-token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
