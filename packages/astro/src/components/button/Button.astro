@@ -1,0 +1,56 @@
+---
+import type { IconProps } from "@lucide/astro";
+import type { HTMLAttributes } from "astro/types";
+import type { ButtonProps } from "@apiary-ui/core";
+import { buttonVariants } from "@apiary-ui/core";
+import { cn } from "tailwind-variants";
+import { Spinner } from "../spinner";
+
+type AstroComponent = (_props: IconProps) => unknown;
+
+interface Props extends Omit<ButtonProps, "leadingIcon" | "trailingIcon">, Omit<HTMLAttributes<"button">, "color"> {
+  leadingIcon?: AstroComponent;
+  trailingIcon?: AstroComponent;
+}
+
+const {
+  variant = "solid",
+  color = "primary",
+  size = "medium",
+  isLoading = false,
+  leadingIcon: LeadingIcon,
+  trailingIcon: TrailingIcon,
+  class: classList,
+  disabled,
+  ...rest
+} = Astro.props;
+---
+
+<button
+  data-variant={variant}
+  data-color={color}
+  data-size={size}
+  data-loading={isLoading ? "" : undefined}
+  disabled={disabled || isLoading}
+  aria-busy={isLoading}
+  class:list={[cn(buttonVariants({ variant, color, size }), classList)]}
+  {...rest}
+>
+  {
+    isLoading && (
+      <Spinner aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform" />
+    )
+  }
+
+  {LeadingIcon !== undefined && <LeadingIcon data-icon="leading" class={isLoading ? "invisible" : ""} />}
+
+  {
+    Astro.slots.has("default") && (
+      <span class={isLoading ? "invisible" : undefined}>
+        <slot />
+      </span>
+    )
+  }
+
+  {TrailingIcon !== undefined && <TrailingIcon data-icon="trailing" class={isLoading ? "invisible" : ""} />}
+</button>

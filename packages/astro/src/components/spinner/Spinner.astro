@@ -1,0 +1,19 @@
+---
+import type { SpinnerProps } from "@apiary-ui/core";
+import { spinnerVariants } from "@apiary-ui/core";
+import { LoaderCircle } from "@lucide/astro";
+import type { IconProps } from "@lucide/astro";
+import { cn } from "tailwind-variants";
+
+interface Props extends SpinnerProps, Omit<IconProps, "size"> {}
+
+const { size = "medium", class: classList, ...rest } = Astro.props;
+---
+
+<LoaderCircle
+  data-slot="spinner"
+  role="status"
+  aria-label="loading"
+  class:list={[cn(spinnerVariants({ size }), classList)]}
+  {...rest}
+/>
