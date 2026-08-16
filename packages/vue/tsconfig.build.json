@@ -1,11 +1,6 @@
 {
   "extends": "@nik3iw/tsconfig/tsconfig.vue.json",
   "compilerOptions": {
-    /* Modules */
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
   },
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],

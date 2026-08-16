@@ -1,4 +1,3 @@
-import { fileURLToPath, URL } from "node:url";
 import path from "node:path";
 
 import { defineConfig } from "vite";
@@ -20,11 +19,6 @@ export default defineConfig({
       include: ["src"],
     }),
   ],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
   build: {
     copyPublicDir: false,
     emptyOutDir: true,

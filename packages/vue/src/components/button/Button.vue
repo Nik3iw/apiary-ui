@@ -6,7 +6,7 @@ import { buttonVariants } from "@apiary-ui/core";
 import { cn } from "tailwind-variants";
 import type { ButtonHTMLAttributes, Component } from "vue";
 import { computed } from "vue";
-import { Spinner } from "@/components/spinner";
+import { Spinner } from "../spinner";
 
 // defineOptions({ inheritAttrs: false })
 
