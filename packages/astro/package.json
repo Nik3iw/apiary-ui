@@ -26,6 +26,18 @@
   "engines": {
     "node": ">=22.12.0"
   },
+  "files": [
+    "src"
+  ],
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
   "scripts": {
     "dev": "astro dev",
     "dev:build": "astro build",
@@ -35,9 +47,17 @@
     "type-check": "astro check"
   },
   "peerDependencies": {
-    "astro": "^7.2.0"
+    "@apiary-ui/core": "^0.1.0",
+    "astro": ">=7.2.0",
+    "tailwind-variants": ">=3.3.0",
+    "tailwindcss": ">=4.3.0"
+  },
+  "dependencies": {
+    "@apiary-ui/core": "workspace:^"
   },
   "devDependencies": {
-    "astro": "^7.2.2"
+    "astro": "^7.2.2",
+    "tailwind-variants": "^3.3.1",
+    "tailwindcss": "^4.3.3"
   }
 }

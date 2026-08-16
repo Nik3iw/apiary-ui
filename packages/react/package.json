@@ -23,6 +23,18 @@
   "bugs": {
     "url": "https://github.com/Nik3iw/apiary-ui/issues"
   },
+  "files": [
+    "src"
+  ],
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "dev:build": "vite build",
@@ -31,11 +43,14 @@
     "type-check": "tsc --build"
   },
   "peerDependencies": {
+    "@apiary-ui/core": "^0.1.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "tailwind-variants": ">=3.3.0",
+    "tailwindcss": ">=4.3.0"
   },
   "dependencies": {
-    "@apiary-ui/core": "workspace:*"
+    "@apiary-ui/core": "workspace:^"
   },
   "devDependencies": {
     "@ark-ui/react": "^5.38.1",
