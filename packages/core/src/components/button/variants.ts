@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
 export const buttonVariants = tv({
-  base: "group/button aria-invalid:border-error-500 aria-invalid:ring-error-500 inline-flex shrink-0 cursor-pointer flex-row items-center justify-center rounded-4xl border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap shadow-neutral-700 transition-all outline-none select-none focus-visible:ring-[2px] active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none aria-invalid:ring-[2px] [&_[data-icon]]:pointer-events-none [&_[data-icon]]:shrink-0 [&_[data-icon]:not([class*='size-'])]:size-4",
+  base: "group/button aria-invalid:border-error-500 aria-invalid:ring-error-500 relative inline-flex shrink-0 cursor-pointer flex-row items-center justify-center rounded-4xl border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap shadow-neutral-700 transition-all outline-none select-none focus-visible:ring-[2px] active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none aria-invalid:ring-[2px] [&_[data-icon]]:pointer-events-none [&_[data-icon]]:shrink-0 [&_[data-icon]:not([class*='size-'])]:size-4",
   variants: {
     variant: {
       solid: "text-white",
