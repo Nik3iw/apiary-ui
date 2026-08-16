@@ -28,7 +28,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "dev:build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
