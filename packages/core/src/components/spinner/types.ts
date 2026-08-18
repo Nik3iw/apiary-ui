@@ -1,5 +1,5 @@
-import type { CoreThemeSize } from "@/types";
+import type { CoreThemeSizeExtended } from "@/types";
 
 export interface SpinnerProps {
-  size?: CoreThemeSize;
+  size?: CoreThemeSizeExtended;
 }
