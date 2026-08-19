@@ -36,6 +36,8 @@ export function Button({
       data-variant={buttonVariants.defaultVariants.variant}
       data-color={buttonVariants.defaultVariants.color}
       data-size={buttonVariants.defaultVariants.size}
+      data-elevated={isElevated ? "" : undefined}
+      data-motion={hasMotion ? "" : undefined}
       data-loading={isLoading ? "" : undefined}
       disabled={isDisabled}
       aria-busy={isLoading}
