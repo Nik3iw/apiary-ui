@@ -4,7 +4,8 @@ import { tv } from "tailwind-variants";
 export const buttonVariants = tv({
   slots: {
     base: "group/button aria-invalid:border-error-500 aria-invalid:ring-error-500 relative isolate inline-flex shrink-0 cursor-pointer appearance-none flex-row items-center justify-center rounded-sm border border-transparent bg-clip-padding align-middle leading-none font-medium whitespace-nowrap outline-0 transition-all outline-none select-none focus-visible:ring-2 disabled:pointer-events-none aria-invalid:ring-2",
-    loadingIcon: "pointer-events-none absolute top-1/2 left-1/2 shrink-0 -translate-x-1/2 -translate-y-1/2 transform",
+    loadingIcon:
+      "pointer-events-none invisible absolute top-1/2 left-1/2 shrink-0 -translate-x-1/2 -translate-y-1/2 transform group-data-loading/button:visible",
     icon: "pointer-events-none shrink-0 group-data-loading/button:invisible",
     slot: "group-data-loading/button:invisible",
   },
