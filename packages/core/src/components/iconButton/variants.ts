@@ -1,13 +1,12 @@
 import type { VariantProps } from "tailwind-variants";
 import { tv } from "tailwind-variants";
 
-export const buttonVariants = tv({
+export const iconButtonVariants = tv({
   slots: {
-    base: "group/button aria-invalid:border-error-500 aria-invalid:ring-error-500 relative isolate inline-flex shrink-0 cursor-pointer appearance-none flex-row items-center justify-center rounded-sm border border-transparent bg-clip-padding align-middle leading-none font-medium whitespace-nowrap outline-0 transition-all outline-none select-none focus-visible:ring-2 disabled:pointer-events-none aria-invalid:ring-2",
+    base: "group/button aria-invalid:border-error-500 aria-invalid:ring-error-500 relative isolate inline-flex shrink-0 cursor-pointer appearance-none flex-row items-center justify-center rounded-sm border border-transparent bg-clip-padding align-middle leading-none font-medium whitespace-nowrap outline-0 transition-all outline-none select-none focus-visible:ring-2 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none aria-invalid:ring-2",
     loadingIcon:
       "pointer-events-none invisible absolute top-1/2 left-1/2 shrink-0 -translate-x-1/2 -translate-y-1/2 transform group-data-loading/button:visible",
     icon: "pointer-events-none shrink-0 group-data-loading/button:invisible",
-    slot: "group-data-loading/button:invisible",
   },
   variants: {
     variant: {
@@ -25,54 +24,16 @@ export const buttonVariants = tv({
       error: "focus-visible:border-error-500 focus-visible:ring-error-500",
     },
     size: {
-      xSmall: { base: "h-8 min-w-8 gap-1 px-2.5 text-xs", icon: "size-4", loadingIcon: "size-4" },
-      small: { base: "h-9 min-w-9 gap-2 px-3.5 text-sm", icon: "size-4", loadingIcon: "size-4" },
-      medium: { base: "h-10 min-w-10 gap-2 px-4 text-sm", icon: "size-5", loadingIcon: "size-5" },
-      large: { base: "h-11 min-w-11 gap-3 px-5 text-base", icon: "size-5", loadingIcon: "size-5" },
-      xLarge: { base: "h-12 min-w-12 gap-2.5 px-5 text-base", icon: "size-5", loadingIcon: "size-5" },
+      xSmall: { base: "h-8 w-8", icon: "size-4", loadingIcon: "size-4" },
+      small: { base: "h-9 w-9", icon: "size-4", loadingIcon: "size-4" },
+      medium: { base: "h-10 w-10", icon: "size-5", loadingIcon: "size-5" },
+      large: { base: "h-11 w-11", icon: "size-5", loadingIcon: "size-5" },
+      xLarge: { base: "h-12 w-12", icon: "size-5", loadingIcon: "size-5" },
     },
-    isElevated: { true: "shadow-md disabled:shadow-none", false: "" },
-    hasMotion: { true: "hover:-translate-y-1 active:not-aria-[haspopup]:translate-y-px", false: "" },
+    isRounded: { true: "rounded-full", false: "" },
     isLoading: { true: "", false: "" },
   },
   compoundVariants: [
-    // Elevate Shadow
-    {
-      isElevated: true,
-      color: "primary",
-      class: "shadow-primary-400",
-    },
-    {
-      isElevated: true,
-      color: "secondary",
-      class: "shadow-secondary-400",
-    },
-    {
-      isElevated: true,
-      color: "neutral",
-      class: "shadow-neutral-400",
-    },
-    {
-      isElevated: true,
-      color: "success",
-      class: "shadow-success-400",
-    },
-    {
-      isElevated: true,
-      color: "info",
-      class: "shadow-info-400",
-    },
-    {
-      isElevated: true,
-      color: "warning",
-      class: "shadow-warning-400",
-    },
-    {
-      isElevated: true,
-      color: "error",
-      class: "shadow-error-400",
-    },
-
     // Solid
     {
       variant: "solid",
@@ -195,10 +156,9 @@ export const buttonVariants = tv({
     variant: "solid",
     color: "primary",
     size: "medium",
-    isElevated: false,
-    hasMotion: true,
+    isRounded: false,
     isLoading: false,
   },
 });
 
-export type ButtonVariants = VariantProps<typeof buttonVariants>;
+export type IconButtonVariants = VariantProps<typeof iconButtonVariants>;
