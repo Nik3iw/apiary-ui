@@ -17,7 +17,7 @@ const config = {
       },
     },
   ],
-  tailwindFunctions: ["tv"],
+  tailwindFunctions: ["tv", "cn", "cx", "cnMerge"],
 };
 
 export default config;
