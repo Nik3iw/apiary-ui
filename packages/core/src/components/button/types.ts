@@ -1,10 +1,12 @@
-import type { CoreThemeColor, CoreThemeSize, CoreThemeVariant } from "@/types";
+import type { CoreThemeColor, CoreThemeSizeExtended, CoreThemeVariant } from "@/types";
 
 export interface ButtonProps {
-  color?: CoreThemeColor;
   variant?: CoreThemeVariant;
-  size?: CoreThemeSize;
+  color?: CoreThemeColor;
+  size?: CoreThemeSizeExtended;
   leadingIcon?: unknown;
   trailingIcon?: unknown;
+  isElevated?: boolean;
+  hasMotion?: boolean;
   isLoading?: boolean;
 }
